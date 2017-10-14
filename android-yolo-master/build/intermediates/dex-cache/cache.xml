@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/Varun/.android/build-cache/f993747911e26b2ab978f70561d61301d6fbfdf1/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="/Users/Varun/Downloads/android-yolo-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_fc1b445be5d48213811b37d882b6e750a6d8d9c1/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Varun/.android/build-cache/f993747911e26b2ab978f70561d61301d6fbfdf1/output/jars/libs/internal_impl-23.1.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="/Users/Varun/Downloads/android-yolo-master/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.1_bdbeb515e32411c26da0eb4eaa62606c33bc2833.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Varun/.android/build-cache/f993747911e26b2ab978f70561d61301d6fbfdf1/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="/Users/Varun/Downloads/android-yolo-master/app/build/intermediates/pre-dexed/debug/classes_fc1b445be5d48213811b37d882b6e750a6d8d9c1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Varun/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.1/support-annotations-23.1.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="/Users/Varun/Downloads/android-yolo-master/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.1_c5a824fc2c002e3fb16fa8f30afdb100d3f86a66.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Varun/.android/build-cache/f993747911e26b2ab978f70561d61301d6fbfdf1/output/jars/libs/internal_impl-23.1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="/Users/Varun/Downloads/android-yolo-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.1.1_bdbeb515e32411c26da0eb4eaa62606c33bc2833/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Varun/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.1/support-annotations-23.1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="/Users/Varun/Downloads/android-yolo-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.1.1_c5a824fc2c002e3fb16fa8f30afdb100d3f86a66/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Varun/.android/build-cache/4adb008b2c39af0ba09d36ce5a2dbfb8f455e236/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="/Users/Varun/Downloads/android-yolo-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_ea5f2afc83040154781f7c674e4b744061c7414b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Varun/Downloads/android-yolo-master/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="663a63a506f11016e1821d55b1ec98a7b99b7d94">
+        <dex dex="/Users/Varun/Downloads/android-yolo-master/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_c32abd17f01886f9486a4c1f94c69dc5401a1ac4/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Varun/.android/build-cache/4adb008b2c39af0ba09d36ce5a2dbfb8f455e236/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="/Users/Varun/Downloads/android-yolo-master/app/build/intermediates/pre-dexed/debug/classes_ea5f2afc83040154781f7c674e4b744061c7414b.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Varun/Downloads/android-yolo-master/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="/Users/Varun/Downloads/android-yolo-master/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_d5ffe78bc8ff1d5d923e321712b13a1473cf8d32/classes.dex" />
+    </item>
+
+</items>

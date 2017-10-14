@@ -1,0 +1,436 @@
+[
+    {
+        "outputFile": "/Users/Varun/Downloads/android-yolo-master/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v11/values-v11.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endLine": 4,
+                    "endColumn": 10,
+                    "endOffset": 181
+                },
+                "from": {
+                    "file": "/Users/Varun/Downloads/android-yolo-master/app/src/main/res/values-v11/styles.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 2,
+                        "startOffset": 210,
+                        "endLine": 9,
+                        "endColumn": 10,
+                        "endOffset": 336
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 186,
+                    "endLine": 10,
+                    "endColumn": 12,
+                    "endOffset": 600
+                },
+                "from": {
+                    "file": "/Users/Varun/.android/build-cache/4adb008b2c39af0ba09d36ce5a2dbfb8f455e236/output/res/values-v11/values-v11.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 239,
+                        "endLine": 9,
+                        "endColumn": 12,
+                        "endOffset": 653
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 605,
+                    "endLine": 16,
+                    "endColumn": 12,
+                    "endOffset": 1025
+                },
+                "from": {
+                    "file": "/Users/Varun/.android/build-cache/4adb008b2c39af0ba09d36ce5a2dbfb8f455e236/output/res/values-v11/values-v11.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 658,
+                        "endLine": 15,
+                        "endColumn": 12,
+                        "endOffset": 1078
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 1030,
+                    "endLine": 22,
+                    "endColumn": 12,
+                    "endOffset": 1453
+                },
+                "from": {
+                    "file": "/Users/Varun/.android/build-cache/4adb008b2c39af0ba09d36ce5a2dbfb8f455e236/output/res/values-v11/values-v11.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 1083,
+                        "endLine": 21,
+                        "endColumn": 12,
+                        "endOffset": 1506
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 1458,
+                    "endLine": 28,
+                    "endColumn": 12,
+                    "endOffset": 1879
+                },
+                "from": {
+                    "file": "/Users/Varun/.android/build-cache/4adb008b2c39af0ba09d36ce5a2dbfb8f455e236/output/res/values-v11/values-v11.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 1511,
+                        "endLine": 27,
+                        "endColumn": 12,
+                        "endOffset": 1932
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 29,
+                    "startColumn": 4,
+                    "startOffset": 1884,
+                    "endLine": 34,
+                    "endColumn": 12,
+                    "endOffset": 2306
+                },
+                "from": {
+                    "file": "/Users/Varun/.android/build-cache/4adb008b2c39af0ba09d36ce5a2dbfb8f455e236/output/res/values-v11/values-v11.xml",
+                    "position": {
+                        "startLine": 28,
+                        "startColumn": 4,
+                        "startOffset": 1937,
+                        "endLine": 33,
+                        "endColumn": 12,
+                        "endOffset": 2359
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 35,
+                    "startColumn": 4,
+                    "startOffset": 2311,
+                    "endLine": 40,
+                    "endColumn": 12,
+                    "endOffset": 2731
+                },
+                "from": {
+                    "file": "/Users/Varun/.android/build-cache/4adb008b2c39af0ba09d36ce5a2dbfb8f455e236/output/res/values-v11/values-v11.xml",
+                    "position": {
+                        "startLine": 34,
+                        "startColumn": 4,
+                        "startOffset": 2364,
+                        "endLine": 39,
+                        "endColumn": 12,
+                        "endOffset": 2784
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 41,
+                    "startColumn": 4,
+                    "startOffset": 2736,
+                    "endColumn": 88,
+                    "endOffset": 2820
+                },
+                "from": {
+                    "file": "/Users/Varun/.android/build-cache/4adb008b2c39af0ba09d36ce5a2dbfb8f455e236/output/res/values-v11/values-v11.xml",
+                    "position": {
+                        "startLine": 42,
+                        "startColumn": 4,
+                        "startOffset": 2968,
+                        "endColumn": 88,
+                        "endOffset": 3052
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 42,
+                    "startColumn": 4,
+                    "startOffset": 2825,
+                    "endColumn": 100,
+                    "endOffset": 2921
+                },
+                "from": {
+                    "file": "/Users/Varun/.android/build-cache/4adb008b2c39af0ba09d36ce5a2dbfb8f455e236/output/res/values-v11/values-v11.xml",
+                    "position": {
+                        "startLine": 43,
+                        "startColumn": 4,
+                        "startOffset": 3057,
+                        "endColumn": 100,
+                        "endOffset": 3153
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 43,
+                    "startColumn": 4,
+                    "startOffset": 2926,
+                    "endLine": 47,
+                    "endColumn": 12,
+                    "endOffset": 3329
+                },
+                "from": {
+                    "file": "/Users/Varun/.android/build-cache/4adb008b2c39af0ba09d36ce5a2dbfb8f455e236/output/res/values-v11/values-v11.xml",
+                    "position": {
+                        "startLine": 44,
+                        "startColumn": 4,
+                        "startOffset": 3158,
+                        "endLine": 48,
+                        "endColumn": 12,
+                        "endOffset": 3561
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 48,
+                    "startColumn": 4,
+                    "startOffset": 3334,
+                    "endLine": 52,
+                    "endColumn": 12,
+                    "endOffset": 3749
+                },
+                "from": {
+                    "file": "/Users/Varun/.android/build-cache/4adb008b2c39af0ba09d36ce5a2dbfb8f455e236/output/res/values-v11/values-v11.xml",
+                    "position": {
+                        "startLine": 49,
+                        "startColumn": 4,
+                        "startOffset": 3566,
+                        "endLine": 53,
+                        "endColumn": 12,
+                        "endOffset": 3981
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 53,
+                    "startColumn": 4,
+                    "startOffset": 3754,
+                    "endLine": 54,
+                    "endColumn": 12,
+                    "endOffset": 3856
+                },
+                "from": {
+                    "file": "/Users/Varun/.android/build-cache/4adb008b2c39af0ba09d36ce5a2dbfb8f455e236/output/res/values-v11/values-v11.xml",
+                    "position": {
+                        "startLine": 56,
+                        "startColumn": 4,
+                        "startOffset": 4165,
+                        "endLine": 57,
+                        "endColumn": 12,
+                        "endOffset": 4267
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 55,
+                    "startColumn": 4,
+                    "startOffset": 3861,
+                    "endLine": 56,
+                    "endColumn": 12,
+                    "endOffset": 3985
+                },
+                "from": {
+                    "file": "/Users/Varun/.android/build-cache/4adb008b2c39af0ba09d36ce5a2dbfb8f455e236/output/res/values-v11/values-v11.xml",
+                    "position": {
+                        "startLine": 58,
+                        "startColumn": 4,
+                        "startOffset": 4272,
+                        "endLine": 59,
+                        "endColumn": 12,
+                        "endOffset": 4396
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 57,
+                    "startColumn": 4,
+                    "startOffset": 3990,
+                    "endLine": 59,
+                    "endColumn": 10,
+                    "endOffset": 4154
+                },
+                "from": {
+                    "file": "/Users/Varun/Downloads/android-yolo-master/app/src/main/res/values-v11/styles.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 2,
+                        "startOffset": 763,
+                        "endLine": 21,
+                        "endColumn": 10,
+                        "endOffset": 927
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 60,
+                    "startColumn": 4,
+                    "startOffset": 4159,
+                    "endLine": 66,
+                    "endColumn": 10,
+                    "endOffset": 4578
+                },
+                "from": {
+                    "file": "/Users/Varun/Downloads/android-yolo-master/app/src/main/res/values-v11/styles.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 2,
+                        "startOffset": 340,
+                        "endLine": 17,
+                        "endColumn": 10,
+                        "endOffset": 759
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 67,
+                    "startColumn": 4,
+                    "startOffset": 4583,
+                    "endColumn": 70,
+                    "endOffset": 4649
+                },
+                "from": {
+                    "file": "/Users/Varun/.android/build-cache/4adb008b2c39af0ba09d36ce5a2dbfb8f455e236/output/res/values-v11/values-v11.xml",
+                    "position": {
+                        "startLine": 62,
+                        "startColumn": 4,
+                        "startOffset": 4580,
+                        "endColumn": 70,
+                        "endOffset": 4646
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 68,
+                    "startColumn": 4,
+                    "startOffset": 4654,
+                    "endColumn": 82,
+                    "endOffset": 4732
+                },
+                "from": {
+                    "file": "/Users/Varun/.android/build-cache/4adb008b2c39af0ba09d36ce5a2dbfb8f455e236/output/res/values-v11/values-v11.xml",
+                    "position": {
+                        "startLine": 63,
+                        "startColumn": 4,
+                        "startOffset": 4651,
+                        "endColumn": 82,
+                        "endOffset": 4729
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 69,
+                    "startColumn": 4,
+                    "startOffset": 4737,
+                    "endLine": 119,
+                    "endColumn": 12,
+                    "endOffset": 8440
+                },
+                "from": {
+                    "file": "/Users/Varun/.android/build-cache/4adb008b2c39af0ba09d36ce5a2dbfb8f455e236/output/res/values-v11/values-v11.xml",
+                    "position": {
+                        "startLine": 64,
+                        "startColumn": 4,
+                        "startOffset": 4734,
+                        "endLine": 114,
+                        "endColumn": 12,
+                        "endOffset": 8437
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 120,
+                    "startColumn": 4,
+                    "startOffset": 8445,
+                    "endLine": 171,
+                    "endColumn": 12,
+                    "endOffset": 12288
+                },
+                "from": {
+                    "file": "/Users/Varun/.android/build-cache/4adb008b2c39af0ba09d36ce5a2dbfb8f455e236/output/res/values-v11/values-v11.xml",
+                    "position": {
+                        "startLine": 115,
+                        "startColumn": 4,
+                        "startOffset": 8442,
+                        "endLine": 166,
+                        "endColumn": 12,
+                        "endOffset": 12285
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 172,
+                    "startColumn": 4,
+                    "startOffset": 12293,
+                    "endColumn": 90,
+                    "endOffset": 12379
+                },
+                "from": {
+                    "file": "/Users/Varun/.android/build-cache/4adb008b2c39af0ba09d36ce5a2dbfb8f455e236/output/res/values-v11/values-v11.xml",
+                    "position": {
+                        "startLine": 169,
+                        "startColumn": 4,
+                        "startOffset": 12469,
+                        "endColumn": 90,
+                        "endOffset": 12555
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 173,
+                    "startColumn": 4,
+                    "startOffset": 12384,
+                    "endColumn": 64,
+                    "endOffset": 12444
+                },
+                "from": {
+                    "file": "/Users/Varun/Downloads/android-yolo-master/app/src/main/res/values-v11/template-styles.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 650,
+                        "endColumn": 65,
+                        "endOffset": 711
+                    }
+                }
+            }
+        ]
+    }
+]

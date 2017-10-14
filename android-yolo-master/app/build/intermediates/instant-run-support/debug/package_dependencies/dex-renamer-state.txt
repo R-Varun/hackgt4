@@ -1,0 +1,13 @@
+#Sat Oct 14 11:57:39 EDT 2017
+renamed.3=classes4.dex
+renamed.2=classes3.dex
+renamed.1=classes.dex
+renamed.0=classes2.dex
+base.3=/Users/Varun/Downloads/android-yolo-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.1.1_c5a824fc2c002e3fb16fa8f30afdb100d3f86a66
+base.2=/Users/Varun/Downloads/android-yolo-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.1.1_bdbeb515e32411c26da0eb4eaa62606c33bc2833
+base.1=/Users/Varun/Downloads/android-yolo-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_ea5f2afc83040154781f7c674e4b744061c7414b
+base.0=/Users/Varun/Downloads/android-yolo-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_fc1b445be5d48213811b37d882b6e750a6d8d9c1
+file.3=/Users/Varun/Downloads/android-yolo-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.1.1_c5a824fc2c002e3fb16fa8f30afdb100d3f86a66/classes.dex
+file.2=/Users/Varun/Downloads/android-yolo-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.1.1_bdbeb515e32411c26da0eb4eaa62606c33bc2833/classes.dex
+file.1=/Users/Varun/Downloads/android-yolo-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_ea5f2afc83040154781f7c674e4b744061c7414b/classes.dex
+file.0=/Users/Varun/Downloads/android-yolo-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_fc1b445be5d48213811b37d882b6e750a6d8d9c1/classes.dex

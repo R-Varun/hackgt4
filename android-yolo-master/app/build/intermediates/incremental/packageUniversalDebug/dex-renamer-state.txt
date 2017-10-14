@@ -1,0 +1,7 @@
+#Sat Oct 14 12:06:19 EDT 2017
+base.0=/Users/Varun/Downloads/android-yolo-master/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_c32abd17f01886f9486a4c1f94c69dc5401a1ac4
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=/Users/Varun/Downloads/android-yolo-master/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_d5ffe78bc8ff1d5d923e321712b13a1473cf8d32/classes.dex
+base.1=/Users/Varun/Downloads/android-yolo-master/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_d5ffe78bc8ff1d5d923e321712b13a1473cf8d32
+file.0=/Users/Varun/Downloads/android-yolo-master/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_c32abd17f01886f9486a4c1f94c69dc5401a1ac4/classes.dex
