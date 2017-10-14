@@ -152,7 +152,7 @@ app.get("/share", function(req, res) {
     'user_to_share' : req.session.user
   };
   var id = uniqid();
-  QRCode.toFile("./barcodeScanner/" + id + ".png", JSON.stringify(shareToken)  , function (err) {
+  QRCode.toFile("./" + id + ".png", JSON.stringify(shareToken)  , function (err) {
     res.send({"status": 'SUCCESS', 'url': "/barcodeScanner/" + id + ".png"});
 
   });
