@@ -1,0 +1,22 @@
+{
+  "name": "hackgt4",
+  "version": "1.0.0",
+  "description": "mad hacks",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/R-Varun/hackgt4.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/R-Varun/hackgt4/issues"
+  },
+  "homepage": "https://github.com/R-Varun/hackgt4#readme",
+  "dependencies": {
+    "needle": "^2.0.1"
+  }
+}
