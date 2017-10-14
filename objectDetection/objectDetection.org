@@ -1,0 +1,242 @@
+#+TITLE: Object Detection .py
+#+AUTHOR: Vishakh Kumar
+
+
+
+
+
+#+BEGIN_SRC python :tangle objectDetection.py
+import time 
+import requests
+import cv2
+import operator
+import numpy as np
+from __future__ import print_function
+
+###############################################################################
+# Variables                                                                   #
+_url = 'https://westcentralus.api.cognitive.microsoft.com/vision/v1/analyses' #
+_key = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXX'                                        #
+_maxNumRetries = 10                                                           #
+###############################################################################
+
+
+
+# We should have image in memory already if we're using this.
+# Load raw image file into memory
+#pathToFileInDisk = r'D:\tmp\3.jpg'
+#with open( pathToFileInDisk, 'rb' ) as f:
+#    data = f.read()
+
+
+#+END_SRC
+
+
+* Identifying useful categories
+So Micrsoft has a bunch of items it can identify and I'd like to throw away any items I don't care about. So I have the microsoft category list and I have the list of stuff I care about.
+The variable categoty_List is the final list of categories I care about.
+
+Why'd I do it this way? Because I'm guessing that the categories I care about are likely to change with time.
+
+#+BEGIN_SRC python :tangle objectDetection.py
+# All of Microsoft's categories
+microsoftCategories = [
+"abstract_",
+"abstract_net",
+"abstract_nonphoto",
+"abstract_rect",
+"abstract_shape",
+"abstract_texture",
+"animal_",
+"animal_bird",
+"animal_cat",
+"animal_dog",
+"animal_horse",
+"animal_panda",
+"building_",
+"building_arch",
+"building_brickwall",
+"building_church",
+"building_corner",
+"building_doorwindows",
+"building_pillar",
+"building_stair",
+"building_street",
+"dark_",
+"drink_",
+"drink_can",
+"dark_fire",
+"dark_fireworks",
+"sky_object",
+"food_",
+"food_bread",
+"food_fastfood",
+"food_grilled",
+"food_pizza",
+"indoor_",
+"indoor_churchwindow",
+"indoor_court",
+"indoor_doorwindows",
+"indoor_marketstore",
+"indoor_room",
+"indoor_venue",
+"dark_light",
+"others_",
+"outdoor_",
+"outdoor_city",
+"outdoor_field",
+"outdoor_grass",
+"outdoor_house",
+"outdoor_mountain",
+"outdoor_oceanbeach",
+"outdoor_playground",
+"outdoor_railway",
+"outdoor_road",
+"outdoor_sportsfield",
+"outdoor_stonerock",
+"outdoor_street",
+"outdoor_water",
+"outdoor_waterside",
+"people_",
+"people_baby",
+"people_crowd",
+"people_group",
+"people_hand",
+"people_many",
+"people_portrait",
+"people_show",
+"people_tattoo",
+"people_young",
+"plant_",
+"plant_branch",
+"plant_flower",
+"plant_leaves",
+"plant_tree",
+"object_screen",
+"object_sculpture",
+"sky_cloud",
+"sky_sun",
+"people_swimming",
+"outdoor_pool",
+"text_",
+"text_mag",
+"text_map",
+"text_menu",
+"text_sign",
+"trans_bicycle",
+"trans_bus",
+"trans_car",
+"trans_trainstation"]
+
+
+#Categories I care about
+myCategories=[
+"food",
+"trans",
+"drink",
+"object",
+"animal",
+"plant"
+]
+
+# Finds matches in the microsoft list for each item in my list and then flattens the list and then removes duplicates by changing into a set and then back into a list.
+category_List = list(set(    sum(  [[s for s in microsoftCategories if x in s] for x in myCategories]   , [])            )) 
+#+END_SRC
+
+
+
+
+
+
+
+
+
+
+
+* Identify Image
+#+BEGIN_SRC python :tangle objectDetection.py
+def identifyImage(image):
+    
+# Computer Vision parameters
+params = { 'visualFeatures' : 'Color,Categories'} 
+headers = dict()
+headers['Ocp-Apim-Subscription-Key'] = _key
+headers['Content-Type'] = 'application/octet-stream'
+
+json = None
+result = processRequest( json, image, headers, params )
+
+if result is not None:
+# Holy shit, you actually have a result. What do I do!
+result["categories"]
+
+    # Load the original image, fetched from the URL
+    data8uint = np.fromstring( data, np.uint8 ) # Convert string to an unsigned int array
+    img = cv2.cvtColor( cv2.imdecode( data8uint, cv2.IMREAD_COLOR ), cv2.COLOR_BGR2RGB )
+
+    ig, ax = plt.subplots(figsize=(15, 20))
+    ax.imshow( img )
+#+END_SRC
+
+
+* Process Request
+
+Magic shit that I don't care about. I've built stuff around this so don't pay too much attention. Just read the comments.
+#+BEGIN_SRC python :tangle objectDetection.py
+# The magic happens here, I guess
+def processRequest( json, data, headers, params ):
+    """
+    Helper function to process the request to Project Oxford
+    Parameters:
+    json: Used when processing images from its URL. See API Documentation
+    data: Used when processing image read from disk. See API Documentation
+    headers: Used to pass the key information and the data type request
+    """
+
+    retries = 0
+    result = None
+    while True:
+        # The actual request happens over here and the response is saved.
+        response = requests.request( 'post', _url, json = json, data = data, headers = headers, params = params )
+
+# You've sent too many requests in too short a period of time.
+        if response.status_code == 429: 
+            print( "Message: %s" % ( response.json()['error']['message'] ) )
+            if retries <= _maxNumRetries: 
+                time.sleep(1) 
+                retries += 1
+                continue
+            else: 
+                print( 'Error: failed after retrying!' )
+                break
+
+# If your response is a success, do this
+        elif response.status_code == 200 or response.status_code == 201:
+
+            if 'content-length' in response.headers and int(response.headers['content-length']) == 0: 
+                # The API didn't recognize anything. This should not happen.
+                result = None 
+
+
+            elif 'content-type' in response.headers and isinstance(response.headers['content-type'], str): 
+                # The api actually recognized something!
+
+                if 'application/json' in response.headers['content-type'].lower(): 
+                    result = response.json() if response.content else None 
+
+                elif 'image' in response.headers['content-type'].lower(): 
+                    result = response.content
+        else:
+# If your response is a failure for whatever reason, do this.
+            print( "Error code: %d" % ( response.status_code ) )
+            print( "Message: %s" % ( response.json()['error']['message'] ) )
+        break
+    return result
+
+
+
+
+
+
+
+#+END_SRC
