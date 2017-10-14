@@ -4,7 +4,6 @@ var app = express()
 var port = process.env.PORT || 5000;
 var path = require('path');
 var server = require('http').createServer(app);
-var io = require('socket.io')(server);
 var bodyParser = require('body-parser');
 var multer  = require('multer');
 var upload = multer({ dest: 'uploads/' });
