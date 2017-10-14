@@ -27,7 +27,6 @@ app.use(session({
 app.post('/login', function (req, res) {
   var user = req.body.user;
   var pass = req.body.pass;
-  
   checkCred(user, pass, function(isValid) {
     if (isValid) {
       res.send({"status":"SUCCESS"})
