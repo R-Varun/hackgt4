@@ -30,6 +30,9 @@ app.post('/login', function (req, res) {
   checkCred(user, pass, function(isValid) {
     if (isValid) {
       res.send({"status":"SUCCESS"})
+      req.session["user"] = user;
+
+
     } else {
       res.send({"status":"FAILURE"})
     }
@@ -44,7 +47,7 @@ client.on('connect', function() {
 });
 
 
-
+//populate what I want
 bcrypt.genSalt(saltRounds, function(err, salt) {
   bcrypt.hash("ddd", salt, function(err, hash) {
       // Store hash in your password DB.
@@ -54,8 +57,24 @@ bcrypt.genSalt(saltRounds, function(err, salt) {
   });
 });
 
+//set view perms of dd to dd2 and dd3
+client.hset(["hash key", "dd2", "dd3"]);
+//inventory of dd
 
-async function checkCred(user, pass, callback) {
+var inventory = [
+  {product_name: "red sweater",
+   classification: "clothes",
+    tags: ["red", "comfortable"]},
+  {product_name: "blue sweater",
+  classification: "clothes",
+    tags: ["blue", "comfortable"]}
+]
+client.set("dd-inventory", JSON.stringify(inventory))
+
+
+
+
+function checkCred(user, pass, callback) {
   client.get('creds', function(err, reply) {
     if (err) {
       callback(false);
@@ -79,7 +98,23 @@ async function checkCred(user, pass, callback) {
     });
   });
 }
+app.get("/lookup", function(req, res) {
+  var q = req.query;
+  //user is looking up himself
+  if (req.session["user"] == q.user) {
+    //throw everything at him
+    client.get(q.user + "-inventory", function(err, reply) {
+      if (err) {
+        console.log("error here");
+      }
+      reply = JSON.parse(reply);
+      res.send({"status": "SUCCESS", "data" : reply});
 
+    });
+  }
+  res.send({"status": "FAIL"});
+  
+});
 
 app.use(express.static('public'))
 
