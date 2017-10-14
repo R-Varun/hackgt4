@@ -6,6 +6,10 @@ var path = require('path');
 var server = require('http').createServer(app);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+var QRCode = require('qrcode')
+var uniqid = require('uniqid');
+
+app.use(express.static(path.join(__dirname, 'barcodeScanner')));
 
 
 
@@ -22,19 +26,17 @@ app.use(session({
   secret: 'keyboard cat',
   resave: false,
   saveUninitialized: true,
-  cookie: { secure: true }
+  cookie: { secure: false }
 }))
 app.post('/login', function (req, res) {
   var user = req.body.user;
   var pass = req.body.pass;
   checkCred(user, pass, function(isValid) {
     if (isValid) {
-      res.send({"status":"SUCCESS"})
       req.session["user"] = user;
-
-
+      res.send({"status":"SUCCESS"});
     } else {
-      res.send({"status":"FAILURE"})
+      res.send({"status":"FAILURE"});
     }
 
   })
@@ -78,15 +80,17 @@ function checkCred(user, pass, callback) {
   client.get('creds', function(err, reply) {
     if (err) {
       callback(false);
+      return;
     }
     console.log(reply)
     
     reply = JSON.parse(reply);
     console.log(reply)
     var t_user = reply[user];
-    if (t_user == null || t_user == undefined) {
+    if (t_user == null || typeof t_user === 'undefined') {
       console.log(t_user)
       callback(false);
+      return;
     }
 
     bcrypt.compare(pass,t_user, function(err, res) {
@@ -95,12 +99,29 @@ function checkCred(user, pass, callback) {
       console.log(res);
       // res == true
       callback(res)
+      return;
     });
   });
 }
+
+client.get("dd-inventory", function(err, reply) {
+  if (err) {
+    console.log("error here");
+  }
+  reply = JSON.parse(reply);
+  console.log(reply);
+  return;
+});
+
 app.get("/lookup", function(req, res) {
   var q = req.query;
+  if (typeof q.user === 'undefined') {
+    res.send({status: FAILURE});
+    return;
+  }
   //user is looking up himself
+
+  console.log("---- " + q.user + " " + req.session["user"] )
   if (req.session["user"] == q.user) {
     //throw everything at him
     client.get(q.user + "-inventory", function(err, reply) {
@@ -109,20 +130,33 @@ app.get("/lookup", function(req, res) {
       }
       reply = JSON.parse(reply);
       res.send({"status": "SUCCESS", "data" : reply});
-
+      return;
     });
+  } else {
+    res.send({"status": "FAILURE"});
   }
-  res.send({"status": "FAIL"});
-  
 });
 
-app.use(express.static('public'))
 
 app.get('/', function(req, res){
   
 });
 
+app.get("/share", function(req, res) {
+  console.log(req)
+  if (typeof req.session.user === 'undefined') {
+    res.send({"status": 'FAILURE'});
+    return;
+  }
+  var shareToken = {
+    'user_to_share' : req.session.user
+  };
+  var id = uniqid();
+  QRCode.toFile("./barcodeScanner/" + id + ".png", JSON.stringify(shareToken)  , function (err) {
+    res.send({"status": 'SUCCESS', 'url': "/barcodeScanner/" + id + ".png"});
 
+  });
+});
 
 server.listen(port, function () {
   console.log("server running on port: " + port.toString())

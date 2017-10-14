@@ -24,6 +24,9 @@
     "passport": "^0.4.0",
     "passport-google-oauth": "^1.0.0",
     "passport-local": "^1.0.0",
-    "redis": "^2.8.0"
+    "qrcode": "^0.9.0",
+    "redis": "^2.8.0",
+    "uniqid": "^4.1.1",
+    "uniqueid": "^1.0.0"
   }
 }
